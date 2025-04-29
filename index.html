@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Filter</title>
+    <style>
+        /* Basic layout and styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .filter-section {
+            background-color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .filter-section label {
+            font-size: 1.2rem;
+            margin-right: 10px;
+        }
+
+        .filter-section select {
+            font-size: 1rem;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .plants-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .plant-item {
+            display: inline-block;
+            margin: 15px;
+            width: 300px;
+            text-align: center;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .plant-item img {
+            width: 100%;
+            height: auto;
+        }
+
+        .plant-item h3 {
+            margin: 10px 0;
+            font-size: 1.5rem;
+            color: #333;
+        }
+
+        .plant-item p {
+            padding: 10px;
+            font-size: 1rem;
+            color: #666;
+        }
+
+        /* Hidden class for filtering */
+        .hidden {
+            display: none;
+        }
+
+        /* Hover effect for plant items */
+        .plant-item:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+        h1{
+            text-align: center;
+            background-color: green;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Outdoor plants</h1>
+
+    <section class="plants-gallery">
+        <!-- Plant Item 1 -->
+        <div class="plant-item low-maintenance" id="plant1">
+            <img src="./assets/1.jpeg" alt="Plant 1">
+            <h3>Rose</h3>
+            <p>Contain compounds with anti-inflammatory, anti-spasmodic, astringent, antiseptic, and other medicinal properties.</p>
+            <b>₹26</b>   
+        </div>
+
+        <!-- Plant Item 2 -->
+        <div class="plant-item air-purifying" id="plant2">
+            <img src="./assets/2.jpeg" alt="Plant 2">
+            <h3>Hibiscus</h3>
+            <p>Hibiscus is a source of Vitamin C, calcium, and iron, which are essential for immune function, bone health, and blood cell formation.</p>
+            <b>₹90</b> 
+        </div>
+
+        <!-- Plant Item 3 -->
+        <div class="plant-item flowering" id="plant3">
+            <img src="./assets/3.jpeg" alt="Plant 3">
+            <h3>Bougainvillea</h3>
+            <p>Bougainvillea spectabilis contains pinitol,  suggesting its potential for treating diabetes.</p>
+            <b>₹151</b> 
+        </div>
+
+        <!-- Add 47 more plant items below -->
+        <div class="plant-item low-maintenance" id="plant4">
+            <img src="./assets/4.jpeg" alt="Plant 4">
+            <h3>Hydrangea</h3>
+            <p>While many cultivated hydrangeas are deciduous (losing leaves in winter), some species are evergreen.</p>
+            <b>₹325</b>  
+        </div>
+
+        <div class="plant-item air-purifying" id="plant5"> 
+            <img src="./assets/5.jpeg" alt="Plant 5">
+            <h3>poeny</h3>
+            <p>The roots of peonies, especially Paeonia lactiflora, are used in TCM. These roots contain compounds that may have anti-inflammatory, anti-blood clotting, anti-cancer, and antioxidant properties.</p>
+            <b>₹436</b>  
+        </div>
+
+        <div class="plant-item flowering" id="plant6">
+            <img src="./assets/6.jpeg" alt="Plant 6">
+            <h3>Lavender</h3>
+            <p>The essential oils extracted from its flowers are widely used in aromatherapy to reduce stress and anxiety, and promote a sense of relaxation.</p>
+            <b>₹173</b>  
+        </div>
+
+        <!-- More plant items (repeat the structure as needed) -->
+        <div class="plant-item low-maintenance" id="plant7">
+            <img src="./assets/7.jpeg" alt="Plant 7">
+            <h3>Marigold</h3>
+            <p>Marigold plants contain a variety of beneficial compounds, including carotenoids like lutein and zeaxanthin, which contribute to their vibrant colors and potential health benefits. They also contain flavonoids</p>
+            <b>₹69</b>  
+        </div>
+
+        <div class="plant-item air-purifying" id="plant8">
+            <img src="./assets/8.jpeg" alt="Plant 8">
+            <h3>Zinnia</h3>
+            <p>Zinnias can also release chemicals into the soil and air, which can have an impact on their surrounding environment and influence other plants nearby.</p>
+            <b>₹69</b>  
+        </div>
+
+        
+
+        <section class="plants-gallery">
+            <!-- Plant Item 10 -->
+            <div class="plant-item low-maintenance" id="plant1">
+                <img src="./assets/10.jpeg" id="Plant 1">
+                <h3>Tulip</h3>
+                <p>Tulip plants are a rich source of organic and inorganic matter, including alkaloids, auxin, sugars, proteins, water, and minerals, as well as some edible petals.</p>
+                <b>₹209</b>
+            </div>  
+    
+            <!-- Plant Item 2 -->
+            <div class="plant-item air-purifying" id="plant2">
+                <img src="./assets/11.jpeg" alt="Plant 2">
+                <h3>Lily</h3>
+                <p>Lilies are known for their strong and pleasant fragrances, making them popular in perfumes and aromatherapy.</p>
+                <b>₹162</b>  
+            </div>
+    
+            <!-- Plant Item 3 -->
+            <div class="plant-item flowering" id="plant3">
+                <img src="./assets/12.jpeg" alt="Plant 3">
+                <h3>Geranium</h3>
+                <p>Geranium is originally from South Africa. In India, it is cultivated in Punjab, Uttar Pradesh, Bihar, Himachal Pradesh, Haryana and North Eastern regions</p>
+                <b>₹299</b> 
+            </div>
+    
+            <!-- Add 47 more plant items below -->
+            <div class="plant-item low-maintenance" id="plant4">
+                <img src="./assets/13.jpeg" alt="Plant 4">
+                <h3>Petunia</h3>
+                <p>Some petunias have been found to absorb pollutants like benzene and formaldehyde from the air.</p>
+                <b>₹79</b>  
+            </div>
+    
+            <div class="plant-item air-purifying" id="plant5">
+                <img src="./assets/14.jpeg" alt="Plant 5">
+                <h3>Achillea</h3>
+                <p>The alkaloids extracted from the leaves of yarrow (Achillea millefolium) are reported to have anti-inflammatory and analgesic activity.</p>
+                <b>₹339</b> 
+            </div>
+    
+            <div class="plant-item flowering" id="plant6">
+                <img src="./assets/15.jpeg" alt="Plant 6">
+                <h3>Dessert Rose</h3>
+                <p>This sap contains cardiac glycosides, which can cause various symptoms if ingested, including nausea, vomiting, and irregular heart rhythms. Additionally, the sap can irritate the skin upon contact.</p>
+                <b>₹195</b>  
+            </div>
+    
+            <!-- More plant items (repeat the structure as needed) -->
+            <div class="plant-item low-maintenance" id="plant7">
+                <img src="./assets/16.jpeg" alt="Plant 7">
+                <h3>Fuchsia</h3>
+                <p>Fuchsia is best grown in hanging baskets in areas that receive just a few hours of sunlight per day, once the last frost is in the rearview mirror and night temperatures are above 50 degrees</p>
+                <b>₹599</b>  
+            </div>
+    
+           
+    
+            <!-- Repeat similar blocks for all 50 plants -->
+            <div class="plant-item low-maintenance" id="plant9">
+                <img src="./assets/18.jpeg" alt="Plant 9">
+                <h3>Plumeria</h3>
+                <p>Plumeria, also known as frangipani, is a genus of flowering plants in the subfamily Rauvolfioideae, of the family Apocynaceae.</p>
+                <b>₹500</b>  
+            </div>
+
+            <section class="plants-gallery">
+                <!-- Plant Item 1 -->
+                <div class="plant-item low-maintenance" id="plant1">
+                    <img src="./assets/19.jpeg" alt="Plant 1">
+                    <h3>Bird Of Paradise/h3>
+                    <p>bird-of-paradise flower, (Strelitzia reginae), ornamental plant of the family Strelitziaceae native to South Africa</p>
+                    <b>₹169</b>  
+                </div>
+        
+                <!-- Plant Item 2 -->
+                <div class="plant-item air-purifying" id="plant2">
+                    <img src="./assets/20.jpeg" alt="Plant 2">
+                    <h3>Canna Lily</h3>
+                    <p>Canna or canna lily is a genus of flowering plants consisting of 10 species. It is the only genus in the family Cannaceae</p>
+                    <b>₹399</b>  
+                </div>
+        
+                <div class="plant-item air-purifying" id="plant8">
+                    <img src="./assets/17.jpeg" alt="Plant 8">
+                    <h3>Gardenia</h3>
+                    <p>Growing Gardenias, Caring for Gardenias, Planting Gardenias. Gardenia, a genus belonging to the coffee family, Rubiaceae, encompasses over 200 species of flowering plants </p>
+                    <b>₹299</b>  
+                </div>
+        
+                <div class="plant-item air-purifying" id="plant8">
+                    <img src="assets/9.jpeg" alt="Plant 8">
+                    <h3>Sunflower</h3>
+                    <p>Learn about the common sunflower (Helianthus annuus), a large annual plant with edible seeds and colorful flower heads</p>
+                    <b>₹60</b>  
+                </div>
+
+                <div class="plant-item low-maintenance" id="plant1">
+                    <img src="assets/21.jpeg" alt="Plant 1">
+                    <h3>Arabian Jasmine</h3>
+                    <p>Jasminum sambac, also known as Arabian jasmine or sambac jasmine, is a fragrant evergreen vine or shrub native to Southeast Asia.</p>
+                    <b>₹149</b>  
+                </div>
+
+                <div class="plant-item low-maintenance" id="plant1">
+                    <img src="assets/22.jpeg" alt="Plant 1">
+                    <h3>Touch-me-not</h3>
+                    <p>Mimosa Pudica is the touch-me-not plant’s scientific name. They are known to attract the attention of not only children but adults too for their unique feature of shying away when touched</p>
+                    <b>₹160</b> 
+                </div>
+
+                <div class="plant-item low-maintenance" id="plant1">
+                    <img src="assets/23.jpeg" alt="Plant 1">
+                    <h3>Gazania</h3>
+                    <p>Gazanias, also known as treasure flowers and African daisies, are warm-weather perennials with large, composite flowers in vibrant shades of yellow and orange</p>
+                    <b>₹69</b> 
+                </div>
+
+                <div class="plant-item low-maintenance" id="plant1">
+                    <img src="assets/24.jpeg" alt="Plant 1">
+                    <h3>Calliopsis</h3>
+                    <p>Calliopsis produces airy, daisy-like blossoms throughout the summer with little to no assistance</p>
+                    <b>₹189</b>  
+                </div>
+
+                <div class="plant-item low-maintenance" id="plant1">
+                    <img src="assets/25.jpeg" alt="Plant 1">
+                    <h3>Osteospermum</h3>
+                    <p>Osteospermum, otherwise known as the Cape or African daisy, is a brilliant choice for long-lasting, colourful blooms through the summer and into autumn</p>
+                    <b>₹50</b>  
+                </div>
+
+                <div class="plant-item low-maintenance" id="plant1">
+                    <img src="assets/26.jpeg" alt="Plant 1">
+                    <h3>Agapanthus</h3>
+                    <p>Agapanthus is a genus of herbaceous perennials that mostly bloom in summer</p>
+                    <b>₹399</b>  
+                </div>
+
+                <div class="plant-item low-maintenance" id="plant1">
+                    <img src="assets/27.jpeg" alt="Plant 1">
+                    <h3>Salvia</h3>
+                    <p>Part of the mint family (Lamiaceae), salvias provide colorful spikes of densely packed flowers with tubular blossoms atop square stems and velvety leaves</p>
+                    <b>₹299</b>  
+                </div>
+
+                <div class="plant-item low-maintenance" id="plant1">
+                    <img src="assets/28.jpeg" alt="Plant 1">
+                    <h3>Elephant Ear</h3>
+                    <p>Elephant ears are tropical perennials known for their lush, large leaves</p>
+                    <b>₹149</b>  
+                </div>
+
+                <div class="plant-item low-maintenance" id="plant1">
+                    <img src="assets/29.jpeg" alt="Plant 1">
+                    <h3>Rose Mary</h3>
+                    <p>Plant rosemary in the spring once the weather has warmed and there is no forecasted frost. Container-grown rosemary can be planted any time of the year.</p>
+                    <b>₹599</b>  
+                </div>
+
+                <div class="plant-item low-maintenance" id="plant1">
+                    <img src="assets/30.jpeg" alt="Plant 1">
+                    <h3>Thyme</h3>
+                    <p>Thyme (Thymus vulgaris) is a low-growing, woody perennial that performs especially well in somewhat dry, sunny conditions</p>
+                    <b>₹74</b>  
+                </div>
+
+                <div class="plant-item low-maintenance" id="plant1">
+                    <img src="assets/31.jpeg" alt="Plant 1">
+                    <h3>Mint</h3>
+                    <p>To grow mint plants (pudina) in your garden or farm with this step-by-step guide</p>
+                    <b>₹159</b>  
+                </div>
+
+                <div class="plant-item low-maintenance" id="plant1">
+                    <img src="assets/32.jpeg" alt="Plant 1">
+                    <h3>Basil</h3>
+                    <p>Basil is a tender plant native to tropical regions, with many varieties and cultivars</p>
+                    <b>₹599</b>  
+                    
+                </div>
+
+                
+
+
+
+               
+
+        
+               
+
+        <!-- Continue until you have 50 plant items -->
+        <!-- Remember to alternate classes between low-maintenance, air-purifying, and flowering plants -->
+        
+    </section>
+
+    <script>
+        // JavaScript to handle the filter functionality
+        const filterSelect = document.getElementById('plant-filter');
+        const plantItems = document.querySelectorAll('.plant-item');
+
+        // Event listener for the filter dropdown change
+        filterSelect.addEventListener('change', function() {
+            const filterValue = filterSelect.value;
+
+            // Loop through all plant items and apply the filter
+            plantItems.forEach(item => {
+                if (filterValue === 'all') {
+                    item.classList.remove('hidden');
+                } else if (item.classList.contains(filterValue)) {
+                    item.classList.remove('hidden');
+                } else {
+                    item.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
